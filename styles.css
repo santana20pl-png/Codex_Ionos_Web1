@@ -407,3 +407,26 @@ footer{padding-bottom:100px}
 @media(max-width:700px){.public-info-grid{grid-template-columns:1fr}}
 
 
+
+/* Footer logo detail visibility: preserve full artwork and fine lower line. */
+.footer-brand .brand-logo,
+.footer-grid .footer-brand .brand-logo,
+.footer-intro .footer-brand .brand-logo{
+  width:min(100%,390px);
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+  filter:drop-shadow(0 0 1px rgba(255,255,255,.28));
+}
+.footer-home-logo img{
+  width:245px;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 0 1px rgba(255,255,255,.28));
+}
+@media(max-width:700px){
+  .footer-brand .brand-logo,
+  .footer-grid .footer-brand .brand-logo,
+  .footer-intro .footer-brand .brand-logo{width:min(100%,360px);height:auto}
+  .footer-home-logo img{width:min(100%,245px);height:auto}
+}
