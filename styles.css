@@ -271,6 +271,31 @@ footer{padding-bottom:100px}
   .copyright{display:grid;justify-items:center;gap:14px;text-align:center}
   .copyright-legal{justify-content:center;text-align:center}
 }
+
+/* The footer divider uses the same light-blue accent as the neural visual system. */
+.footer-home-logo{border-right-color:var(--sky)!important}
+.footer-faq-link{display:inline-flex!important}
+@media(max-width:700px){
+  .footer-home-logo{border-right-color:transparent!important;border-bottom-color:var(--sky)!important}
+}
+
+/* Footer navigation must not leave the funding item looking permanently selected. */
+.nav>a[data-i18n="nav.funding"]{
+  padding:7px 0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:inherit!important;
+  box-shadow:none!important;
+  transform:none!important;
+}
+.nav>a[data-i18n="nav.funding"]:hover,
+.nav>a[data-i18n="nav.funding"]:focus-visible{
+  color:var(--blue)!important;
+  background:var(--pale)!important;
+  box-shadow:none!important;
+  transform:none!important;
+}
 @media(max-width:520px){footer{padding-bottom:110px}.copyright{padding-inline:20px}}
 
 /* Active legal section navigation */

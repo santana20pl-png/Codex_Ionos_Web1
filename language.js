@@ -1402,8 +1402,8 @@ function applyLanguage(lang) {
 }
 
 const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
-const savedLanguage = localStorage.getItem("gss-language");
-applyLanguage(requestedLanguage || savedLanguage || document.documentElement.lang || "de");
+// The public entry point is always German unless the visitor explicitly selects a language.
+applyLanguage(requestedLanguage || "de");
 
 document.querySelectorAll(".lang").forEach((button) => {
   button.addEventListener("click", () => applyLanguage(button.dataset.lang));

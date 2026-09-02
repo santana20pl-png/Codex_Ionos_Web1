@@ -46,9 +46,17 @@ Estado: revisión local, sin publicación en GitHub ni en IONOS.
 - Cabecera y scripts globales: correctos en 23 páginas.
 - No queda la cadena defectuosa `setLanguagee`.
 - El selector de idioma actualiza también la URL, el almacenamiento local, los enlaces internos y los metadatos SEO para que la elección se conserve al navegar y recargar.
-- No se ha hecho `git push`, commit remoto, publicación ni modificación de DNS.
+- La publicación queda autorizada por el usuario para este paquete; `CNAME` y DNS no se modifican.
 
 ## Próximo paso seguro
 
-Abrir esta copia local como prueba, revisar móvil/tablet y desktop, confirmar los datos legales y proporcionar el endpoint CRM. Solo después de tu aprobación explícita se preparará el commit para `santana20pl-png/Codex_Ionos_Web1`.
+La copia local se valida antes del envío; después se actualiza `santana20pl-png/Codex_Ionos_Web1` y se comprueba la publicación con el mismo `CNAME`.
+
+## Correcciones posteriores — 3 de septiembre de 2026
+
+- La entrada directa sin parámetro de idioma inicia siempre en alemán; `?lang=en` y `?lang=es` siguen funcionando de forma explícita.
+- El pie de página de inicio se convirtió en el pie común de las 23 páginas, incluyendo FAQ, Eventos/Blog y redes configuradas o inactivas.
+- La línea divisoria del bloque de marca usa el mismo acento azul claro del sistema visual neural.
+- El enlace de financiación del encabezado dejó de tener apariencia de elemento permanentemente activo; el resaltado queda limitado al hover/foco visible.
+- Se actualizó el cache-busting HTML a `global-13`.
 
