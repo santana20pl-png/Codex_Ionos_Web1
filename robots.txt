@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /previews/
+Disallow: /versions/
+Disallow: /propuestas-vision.html
+Disallow: /propuesta-vision-texto-sonido.html
+
+Sitemap: https://gss-consulting.de/sitemap.xml
