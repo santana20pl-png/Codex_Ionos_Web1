@@ -1692,3 +1692,12 @@ html::-webkit-scrollbar-thumb:hover{
   }
 
 }
+/* KompetenzWandel as a distinct GSS product, without duplicating its landing page. */
+.innovation{background:linear-gradient(135deg,#e9f7fc,#fff)}
+.innovation-layout{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(28px,5vw,80px);align-items:center}
+.innovation h2 span{display:block;color:var(--blue);font-size:.55em;letter-spacing:0;margin-top:12px}
+.innovation p:not(.eyebrow){max-width:68ch;color:var(--muted)}
+.innovation-points{list-style:none;display:grid;gap:16px;margin:0;padding:0}
+.innovation-points li{padding:20px 22px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:var(--shadow);font-weight:700}
+.footer-link-inactive{opacity:.5;cursor:not-allowed;text-decoration:none}
+@media(max-width:850px){.innovation-layout{grid-template-columns:1fr}.innovation-points{gap:10px}}

@@ -42,8 +42,14 @@ window.gssTranslations = {
   }
 };
 window.gssTranslations.es["experience.eyebrow"]="Experiencia GSS"; window.gssTranslations.es["experience.title"]="Temas complejos. Explicados con claridad. Aplicables directamente."; window.gssTranslations.es["experience.text"]="Descubra cómo GSS acompaña a personas y organizaciones desde la primera comprensión hasta la aplicación concreta."; window.gssTranslations.es["experience.video"]="GSS en movimiento"; window.gssTranslations.en["experience.eyebrow"]="GSS Experience"; window.gssTranslations.en["experience.title"]="Complex topics. Clearly explained. Directly applicable."; window.gssTranslations.en["experience.text"]="Discover how GSS supports people and organisations from first understanding to concrete implementation."; window.gssTranslations.en["experience.video"]="GSS in motion";
+Object.assign(window.gssTranslations.es, {
+  "kw.eyebrow":"Producto innovador de GSS","kw.title":"KompetenzWandel KI+ <span>Mejorar sin empezar de cero.</span>","kw.text":"KompetenzWandel KI+ une el desarrollo profesional con la soberanía digital. Hace visibles las experiencias y competencias existentes, las refuerza digitalmente y las transforma en próximos pasos profesionales realistas.","kw.line1":"Competencias de futuro y transformación profesional","kw.line2":"Actuar en el mundo digital con seguridad y autonomía","kw.format":"Bilingual Digital Café+ como formato práctico y de transferencia","kw.cta":"Descubrir KompetenzWandel KI+","service.3t":"KompetenzWandel KI+","service.3d":"Transformación profesional y soberanía digital como producto de GSS.","experts.title":"Personas y colaboración detrás de GSS","expert.founder":"Geraldine Sepúlveda Santana","expert.founderRole":"Titular de GSS · Responsable de KompetenzWandel KI+","expert.founderText":"Responsable del producto, currículo, calidad, mercado y desarrollo."
+});
+Object.assign(window.gssTranslations.en, {
+  "kw.eyebrow":"GSS innovation product","kw.title":"KompetenzWandel KI+ <span>Upgrade instead of restart.</span>","kw.text":"KompetenzWandel KI+ connects professional development with digital sovereignty. Existing experience, knowledge and skills become visible, digitally strengthened and translated into realistic next career steps.","kw.line1":"Future skills and professional development","kw.line2":"Act safely and independently in the digital world","kw.format":"Bilingual Digital Café+ as a practical transfer format","kw.cta":"Discover KompetenzWandel KI+","service.3t":"KompetenzWandel KI+","service.3d":"Professional development and digital sovereignty as a GSS product.","experts.title":"People and collaboration behind GSS","expert.founder":"Geraldine Sepúlveda Santana","expert.founderRole":"GSS owner · Responsible for KompetenzWandel KI+","expert.founderText":"Responsible for the product, curriculum, quality, market and scaling."
+});
 const german = Object.fromEntries([...document.querySelectorAll("[data-i18n]")].map(el=>[el.dataset.i18n,el.innerHTML]));
-const GSS_BASE_URL="https://gss-consulting.de";
+const GSS_BASE_URL="https://web.gss-consulting.de";
 const GSS_LOCALES={de:"de_DE",es:"es_ES",en:"en_US"};
 const GSS_SEO={
   "index.html":{de:["GSS Management Consulting | Strategie, Digitalisierung und KI","GSS Management Consulting verbindet strategische Beratung, KI, Digitalisierung, Weiterbildung und berufliche Entwicklung."],es:["GSS Management Consulting | Estrategia, digitalizacion e IA","GSS Management Consulting combina consultoria estrategica, IA, digitalizacion, formacion y desarrollo profesional."],en:["GSS Management Consulting | Strategy, digitalization and AI","GSS Management Consulting combines strategic consulting, AI, digitalization, training and professional development."]},
@@ -250,6 +256,27 @@ function setupLegalSectionNavigation(){
   window.addEventListener("hashchange",()=>{const id=location.hash.slice(1);if(sections.some(section=>section.id===id))setActive(id,false)});
 }
 setupLegalSectionNavigation();
+
+// One shared entry to the GSS product, on every corporate page.
+document.querySelectorAll('.nav .nav-group').forEach((group) => {
+  if (group.querySelector('[data-i18n="nav.services"]') && !group.querySelector('[data-kw-link]')) {
+    const submenu = group.querySelector('.submenu');
+    if (submenu) {
+      const link = document.createElement('a');
+      link.href = 'https://kompetenzwandel-ki-plus.gss-consulting.de/?lang=de';
+      link.dataset.kwLink = '';
+      link.dataset.i18n = 'kw.nav';
+      link.textContent = 'KompetenzWandel KI+';
+      submenu.appendChild(link);
+    }
+  }
+});
+// Keep announced future items visible without sending visitors to a dead # target.
+document.querySelectorAll('footer a[href="#"]').forEach((link) => {
+  link.removeAttribute('href');
+  link.setAttribute('aria-disabled', 'true');
+  link.classList.add('footer-link-inactive');
+});
 
 
 

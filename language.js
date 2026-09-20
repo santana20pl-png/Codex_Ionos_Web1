@@ -328,7 +328,7 @@
     "legal.privacyTitle": "Política de privacidad",
     "legal.updated": "Actualizado: junio de 2026. Esta plantilla no sustituye asesoramiento jurídico individual y debe revisarse con los datos finales de la empresa antes de su publicación.",
     "legal.controllerTitle": "1. Responsable del tratamiento",
-    "legal.controllerText": "La entidad responsable del tratamiento de datos en este sitio web es GSS Management Consulting, [añadir nombre de la titular / persona representante], [añadir calle y número], [añadir código postal y ciudad], Alemania. Email: [añadir email]. Teléfono: [añadir teléfono].",
+    "legal.controllerText": "La responsable del tratamiento de datos en este sitio web es GSS Management Consulting, titular Geraldine Sepúlveda Santana, Hanauer Landstraße 521, oficinas 129-130, 1.ª planta, 60386 Frankfurt am Main, Alemania. Correo electrónico: info@gss-consulting.de. Teléfono: +49 176 32428387.",
     "legal.preambleTitle": "Preámbulo y ámbito de aplicación",
     "legal.preambleText": "Esta política informa sobre qué datos personales trata GSS, con qué finalidad, alcance y base jurídica. Se aplica al sitio web, futuras áreas de aprendizaje y comunidad, aplicaciones digitales o móviles, presencias online externas y prestación de servicios. Los datos personales son todas las informaciones relativas a una persona física identificada o identificable.",
     "legal.dataTitle": "2. Datos que se tratan",
@@ -360,13 +360,13 @@
     "legal.imprintEyebrow": "Identificación del proveedor",
     "legal.imprintTitle": "Aviso legal",
     "legal.providerTitle": "Información según § 5 DDG",
-    "legal.providerText": "GSS Management Consulting<br>[añadir nombre de la titular / forma jurídica]<br>[añadir calle y número]<br>[añadir código postal y ciudad]<br>Alemania",
+    "legal.providerText": "GSS Management Consulting<br>Titular: Geraldine Sepúlveda Santana<br>Hanauer Landstraße 521, oficinas 129-130, 1.ª planta<br>60386 Frankfurt am Main<br>Alemania",
     "legal.contactTitle": "Contacto",
-    "legal.contactLegalText": "Teléfono: [añadir teléfono]<br>Email: [añadir email]<br>Sitio web: [añadir dominio]",
+    "legal.contactLegalText": "Teléfono: +49 176 32428387<br>Correo electrónico: info@gss-consulting.de<br>Sitio web: web.gss-consulting.de",
     "legal.representedTitle": "Representación",
-    "legal.representedText": "[Añadir persona representante / dirección]",
+    "legal.representedText": "Geraldine Sepúlveda Santana, titular",
     "legal.taxTitle": "IVA / datos registrales",
-    "legal.taxText": "Número de identificación fiscal a efectos de IVA según § 27a UStG: [añadir si existe]. Registro y número registral: [añadir si existe]. Si no hay inscripción registral o ID de IVA, adaptar esta sección.",
+    "legal.taxText": "Número de identificación fiscal a efectos de IVA según § 27a UStG: DE459498394.",
     "legal.liabilityTitle": "Responsabilidad por contenidos y enlaces",
     "legal.liabilityText": "Los contenidos de este sitio web se han creado con cuidado. No obstante, no se puede garantizar su exactitud, integridad o actualidad. Los enlaces externos conducen a contenidos de terceros; el proveedor correspondiente es responsable de dichos contenidos.",
     "legal.disputeTitle": "Resolución de litigios de consumo",
@@ -978,7 +978,7 @@
     "legal.privacyTitle": "Privacy policy",
     "legal.updated": "Last updated: June 2026. This template does not replace individual legal advice and should be reviewed with the final company data before publication.",
     "legal.controllerTitle": "1. Controller",
-    "legal.controllerText": "The controller responsible for data processing on this website is GSS Management Consulting, [add owner / authorised representative], [add street and number], [add postcode and city], Germany. Email: [add email address]. Phone: [add phone number].",
+    "legal.controllerText": "The controller responsible for data processing on this website is GSS Management Consulting, owner Geraldine Sepúlveda Santana, Hanauer Landstraße 521, offices 129-130, 1st floor, 60386 Frankfurt am Main, Germany. Email: info@gss-consulting.de. Phone: +49 176 32428387.",
     "legal.preambleTitle": "Preamble and scope",
     "legal.preambleText": "This policy explains which personal data GSS processes, for which purposes, to what extent and on which legal basis. It applies to the website, future learning and community areas, mobile or digital applications, external online presences and the provision of services. Personal data means any information relating to an identified or identifiable natural person.",
     "legal.dataTitle": "2. Data processed",
@@ -1010,13 +1010,13 @@
     "legal.imprintEyebrow": "Provider identification",
     "legal.imprintTitle": "Imprint",
     "legal.providerTitle": "Information pursuant to § 5 DDG",
-    "legal.providerText": "GSS Management Consulting<br>[add owner / legal form]<br>[add street and number]<br>[add postcode and city]<br>Germany",
+    "legal.providerText": "GSS Management Consulting<br>Owner: Geraldine Sepúlveda Santana<br>Hanauer Landstraße 521, offices 129-130, 1st floor<br>60386 Frankfurt am Main<br>Germany",
     "legal.contactTitle": "Contact",
-    "legal.contactLegalText": "Phone: [add phone number]<br>Email: [add email address]<br>Website: [add domain]",
+    "legal.contactLegalText": "Phone: +49 176 32428387<br>Email: info@gss-consulting.de<br>Website: web.gss-consulting.de",
     "legal.representedTitle": "Represented by",
-    "legal.representedText": "[Add authorised representative / management]",
+    "legal.representedText": "Geraldine Sepúlveda Santana, owner",
     "legal.taxTitle": "VAT / register information",
-    "legal.taxText": "VAT identification number pursuant to § 27a UStG: [add if available]. Register court and registration number: [add if available]. If there is no register entry or VAT ID, adapt this section accordingly.",
+    "legal.taxText": "VAT identification number pursuant to § 27a UStG: DE459498394.",
     "legal.liabilityTitle": "Liability for content and links",
     "legal.liabilityText": "The content of this website has been created with care. Nevertheless, no guarantee can be given for accuracy, completeness or timeliness. External links lead to third-party content; the respective provider is responsible for such content.",
     "legal.disputeTitle": "Consumer dispute resolution",
@@ -1305,6 +1305,9 @@ const originalText = Object.fromEntries(
   [...document.querySelectorAll("[data-i18n]")].map((el) => [el.dataset.i18n, el.innerHTML])
 );
 
+Object.assign(pageTranslations.es, {"kw.nav":"KompetenzWandel KI+"});
+Object.assign(pageTranslations.en, {"kw.nav":"KompetenzWandel KI+"});
+
 function updateLocalizedLinks(lang) {
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href");
@@ -1395,6 +1398,15 @@ function applyLanguage(lang) {
   }
   document.querySelectorAll(".lang").forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === activeLang);
+  });
+  document.querySelectorAll('[data-kw-link]').forEach((link) => {
+    const localPreview = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+    const target = localPreview
+      ? `${window.location.protocol}//${window.location.hostname}:8776/index.html`
+      : 'https://kompetenzwandel-ki-plus.gss-consulting.de/index.html';
+    const url = new URL(target);
+    url.searchParams.set('lang', activeLang);
+    link.href = url.toString();
   });
   localizeSearchUi(activeLang);
   updateLocalizedLinks(activeLang); if (typeof window.updatePhoneCountryLabels === "function") window.updatePhoneCountryLabels(); if (typeof window.setupFundingPortalLinks === "function") window.setupFundingPortalLinks(); if (typeof window.refreshHumanChecks === "function") window.refreshHumanChecks(); if (typeof window.refreshClientDetails === "function") window.refreshClientDetails(); document.querySelectorAll("#contact-form, #funding-consultation-form").forEach((form) => { if (typeof window.applyLocalizedValidation === "function") window.applyLocalizedValidation(form); });
