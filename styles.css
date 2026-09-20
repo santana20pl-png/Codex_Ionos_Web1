@@ -311,6 +311,8 @@ footer{padding-bottom:100px}
 .footer-grid .footer-inline-links{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
 .footer-inline-links span{color:#7fa0b1}
 .azav-hero{background:linear-gradient(135deg,#e7f5fb,#fff 55%,#dceef6)}
+.azav-status-badge{display:inline-block;max-width:100%;margin:0 0 18px;padding:9px 15px;border:1px solid #d18b26;border-radius:999px;background:#fff1d7;color:#7d4300;font-weight:800;line-height:1.35;cursor:default}
+.quality .azav-status-badge{margin-bottom:16px}
 .azav-disclaimer{max-width:880px;margin:34px auto 0;padding:18px 22px;border-left:4px solid var(--blue);border-radius:0 14px 14px 0;background:#fff;color:var(--muted);text-align:center}
 
 /* Strategic funding navigation highlight */
