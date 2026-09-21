@@ -99,8 +99,8 @@ const SITE_SEARCH_INDEX={
     {title:"Rechtliches",text:"Impressum Datenschutz Cookies EU AI Act DSGVO",url:"legal.html"}
     ,{title:"Masterclass",text:"Intensivformat KI Digitalisierung Führung Transfer",url:"masterclass.html"}
     ,{title:"Agentur",text:"digitale Lösungen Automatisierung KI Umsetzung",url:"agentur.html"}
-    ,{title:"Digitale Souveränität",text:"Datenschutz KI Quellen Deepfakes Resilienz Schulen Unternehmen Kooperation",url:"digitale-souveraenitaet.html"}
-    ,{title:"Einstieg und Anschluss",text:"Jugendliche Schule Praktikum Ausbildung Bewerbung Berufseinstieg Smart ins Praktikum Kooperation",url:"einstieg-und-anschluss.html"}
+    ,{title:"Digitale Souveränität",text:"KompetenzWandel Datenschutz KI Quellen Deepfakes Resilienz Schulen Unternehmen Kooperation",url:"index.html#kompetenzwandel"}
+    ,{title:"Einstieg und Anschluss",text:"KompetenzWandel Jugendliche Schule Praktikum Ausbildung Bewerbung Berufseinstieg Smart ins Praktikum Kooperation",url:"index.html#schule-beruf"}
   ],
   es:[
     {title:"Inicio",text:"GSS Management Consulting claridad futuro digital consultoría formación coaching",url:"index.html"},
@@ -117,8 +117,8 @@ const SITE_SEARCH_INDEX={
     {title:"Legal",text:"aviso legal privacidad cookies EU AI Act RGPD DSGVO",url:"legal.html"}
     ,{title:"Masterclass",text:"formato intensivo IA digitalización liderazgo transferencia",url:"masterclass.html"}
     ,{title:"Agencia",text:"soluciones digitales automatización IA implementación",url:"agentur.html"}
-    ,{title:"Soberanía digital",text:"privacidad IA fuentes deepfakes resiliencia escuelas empresas cooperación",url:"digitale-souveraenitaet.html"}
-    ,{title:"Acceso y continuidad",text:"jóvenes escuela prácticas formación candidatura acceso al empleo cooperación",url:"einstieg-und-anschluss.html"}
+    ,{title:"Soberanía digital",text:"KompetenzWandel privacidad IA fuentes deepfakes resiliencia escuelas empresas cooperación",url:"index.html#kompetenzwandel"}
+    ,{title:"Acceso y continuidad",text:"KompetenzWandel jóvenes escuela prácticas formación candidatura acceso al empleo cooperación",url:"index.html#schule-beruf"}
   ],
   en:[
     {title:"Home",text:"GSS Management Consulting clarity digital future consulting training coaching",url:"index.html"},
@@ -135,8 +135,8 @@ const SITE_SEARCH_INDEX={
     {title:"Legal",text:"imprint privacy cookies EU AI Act GDPR DSGVO",url:"legal.html"}
     ,{title:"Masterclass",text:"intensive format AI digitalization leadership transfer",url:"masterclass.html"}
     ,{title:"Agency",text:"digital solutions automation AI implementation",url:"agentur.html"}
-    ,{title:"Digital sovereignty",text:"privacy AI sources deepfakes resilience schools companies cooperation",url:"digitale-souveraenitaet.html"}
-    ,{title:"Entry and Progression",text:"young people school internship vocational training applications career entry cooperation",url:"einstieg-und-anschluss.html"}
+    ,{title:"Digital sovereignty",text:"KompetenzWandel privacy AI sources deepfakes resilience schools companies cooperation",url:"index.html#kompetenzwandel"}
+    ,{title:"Entry and Progression",text:"KompetenzWandel young people school internship vocational training applications career entry cooperation",url:"index.html#schule-beruf"}
   ]
 };
 function escapeHtml(value){return String(value||"").replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]))}
@@ -271,18 +271,22 @@ document.querySelectorAll('.nav .nav-group').forEach((group) => {
     const submenu = group.querySelector('.submenu');
     if (submenu) {
       const products = [
-        ['einstieg-und-anschluss.html','submenu.youthOffer','Einstieg und Anschluss','productLink'],
-        ['digitale-souveraenitaet.html','submenu.sovereignty','Digitale Souveränität','productLink'],
-        ['https://kompetenzwandel-ki-plus.gss-consulting.de/?lang=de','kw.nav','KompetenzWandel KI+','kwLink']
+        ['https://kompetenzwandel-ki-plus.gss-consulting.de/?lang=de','kw.nav','KompetenzWandel KI+','kwLink',false],
+        ['https://kompetenzwandel-ki-plus.gss-consulting.de/modul.html?mod=einstieg&lang=de','submenu.youthOffer','Einstieg und Anschluss','kwYouthLink',true],
+        ['https://kompetenzwandel-ki-plus.gss-consulting.de/index.html?lang=de#digitale-souveraenitaet','submenu.sovereignty','Digitale Souveränität','kwSovereigntyLink',true]
       ];
-      products.forEach(([href,key,label,dataKey]) => {
+      const digitalEntry = submenu.querySelector('[data-i18n="submenu.digital"]');
+      const digitalBlock = digitalEntry?.closest('.submenu-group') || digitalEntry;
+      const insertBefore = digitalBlock?.nextSibling || null;
+      products.forEach(([href,key,label,dataKey,isChild]) => {
         if (submenu.querySelector(`[data-i18n="${key}"]`)) return;
         const link = document.createElement('a');
         link.href = href;
         link.dataset[dataKey] = '';
         link.dataset.i18n = key;
         link.textContent = label;
-        submenu.appendChild(link);
+        if (isChild) link.classList.add('product-subitem');
+        submenu.insertBefore(link, insertBefore);
       });
     }
   }
