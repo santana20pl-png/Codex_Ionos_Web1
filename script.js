@@ -78,7 +78,7 @@ function gssUpdateSeo(lang){const active=["de","es","en"].includes(lang)?lang:"d
 function gssStoreLanguage(lang){try{localStorage.setItem("gss-language",lang)}catch{}}
 function gssSavedLanguage(){try{return localStorage.getItem("gss-language")}catch{return null}}
 function gssSyncLanguageUrl(lang){if(!history.replaceState)return;const url=new URL(location.href);url.searchParams.set("lang",lang);history.replaceState(null,"",url.toString())}
-document.querySelectorAll("[data-social]").forEach(link=>{const url=SOCIAL_URLS[link.dataset.social];if(url){link.href=url;link.target="_blank";link.rel="noopener"}else{link.classList.add("social-inactive");link.setAttribute("aria-disabled","true");link.setAttribute("title","Próximamente");link.addEventListener("click",event=>event.preventDefault());}});
+document.querySelectorAll("[data-social]").forEach(link=>{const url=SOCIAL_URLS[link.dataset.social];if(url){link.href=url;link.target="_blank";link.rel="noopener noreferrer"}else{link.classList.add("social-inactive");link.setAttribute("aria-disabled","true");link.setAttribute("title","Próximamente");link.addEventListener("click",event=>event.preventDefault());}});
 
 function getActiveLang(){const lang=document.documentElement.lang;return ["de","es","en"].includes(lang)?lang:"de"}
 const SITE_SEARCH_INDEX={
