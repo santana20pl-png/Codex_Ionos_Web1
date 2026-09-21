@@ -134,10 +134,10 @@
     "experts.joseFocus1": "Infraestructuras Windows, Linux y servidores",
     "experts.joseFocus2": "Virtualización, almacenamiento y recuperación ante desastres",
     "experts.joseFocus3": "IA, código abierto y formación técnica",
-    "experts.klausRole": "Logística · Administración · Organización",
-    "experts.klausText": "Klaus Schmidt aporta experiencia en logística, administración, organización y formación. Otro eje es la concepción, creación y distribución de soluciones modulares de contenedores para escuelas, oficinas y otros usos.",
+    "experts.klausRole": "Operaciones · Desarrollo estratégico · RR. PP. y marketing",
+    "experts.klausText": "Klaus Schmidt combina experiencia en logística, administración y organización con desarrollo estratégico, relaciones públicas, marketing y formación. También aporta conocimientos prácticos en la concepción, creación y distribución de soluciones modulares de contenedores para escuelas, oficinas y otros usos.",
     "experts.klausFocus1": "Logística, administración y procesos organizativos",
-    "experts.klausFocus2": "Formación, coordinación e implementación práctica",
+    "experts.klausFocus2": "Desarrollo estratégico, relaciones públicas, marketing y formación",
     "experts.klausFocus3": "Soluciones modulares de contenedores para escuelas, oficinas y otros ámbitos",
     "company.missionEyebrow": "Misión y principios",
     "company.missionTitle": "Diseñar el futuro profesional de forma activa, digital y sostenible.",
@@ -810,10 +810,10 @@
     "experts.joseFocus1": "Windows, Linux and server infrastructures",
     "experts.joseFocus2": "Virtualization, storage and disaster recovery",
     "experts.joseFocus3": "AI, open source and technical training",
-    "experts.klausRole": "Logistics · Administration · Organization",
-    "experts.klausText": "Klaus Schmidt contributes experience in logistics, administration, organization and training. Another focus is the design, creation and distribution of modular container solutions for schools, offices and other uses.",
+    "experts.klausRole": "Operations · Strategy development · PR & Marketing",
+    "experts.klausText": "Klaus Schmidt combines experience in logistics, administration and organization with strategy development, public relations, marketing and training. He also contributes practical expertise in the design, creation and distribution of modular container solutions for schools, offices and other uses.",
     "experts.klausFocus1": "Logistics, administration and organizational processes",
-    "experts.klausFocus2": "Training, coordination and practical implementation",
+    "experts.klausFocus2": "Strategy development, public relations, marketing and training",
     "experts.klausFocus3": "Modular container solutions for schools, offices and other settings",
     "company.missionEyebrow": "Mission and principles",
     "company.missionTitle": "Shape professional futures actively, digitally and sustainably.",
@@ -1356,6 +1356,13 @@
 const originalText = Object.fromEntries(
   [...document.querySelectorAll("[data-i18n]")].map((el) => [el.dataset.i18n, el.innerHTML])
 );
+Object.assign(originalText, {
+  "expert.klausRole": "Operative Umsetzung · Strategieentwicklung · PR &amp; Marketing",
+  "expert.klausText": "Erfahrung in Logistik, Verwaltung und Organisation sowie in Strategieentwicklung, Öffentlichkeitsarbeit, Marketing und Schulung. Hinzu kommt Praxis in der Konzeption, Erstellung und Distribution modularer Containerlösungen für Schulen, Büros und weitere Nutzungen.",
+  "experts.klausRole": "Operative Umsetzung · Strategieentwicklung · PR &amp; Marketing",
+  "experts.klausText": "Klaus Schmidt verbindet Erfahrung in Logistik, Verwaltung und Organisation mit Strategieentwicklung, Öffentlichkeitsarbeit, Marketing und Schulung. Ergänzend bringt er Praxis in der Konzeption, Erstellung und Distribution modularer Containerlösungen für Schulen, Büros und weitere Nutzungen ein.",
+  "experts.klausFocus2": "Strategieentwicklung, Öffentlichkeitsarbeit, Marketing und Schulung"
+});
 
 Object.assign(pageTranslations.es, {"kw.nav":"KompetenzWandel KI+"});
 Object.assign(pageTranslations.en, {"kw.nav":"KompetenzWandel KI+"});
